@@ -1,0 +1,16 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "declaration-empty-line-before": "never",
+        "declaration-block-no-redundant-longhand-properties": [true, {"ignoreShorthands": ["bg", "font", "transition"]}],
+        "number-leading-zero": "never",
+        "color-named": "never",
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'else', 'for', 'each', 'while', 'mixin', 'include', 'content', 'return', 'function']
+            }
+        ],
+        "no-descending-specificity": null
+    }
+}
