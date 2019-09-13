@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+require('colors');
+const cp = require('child_process');
+
+console.clear();
+console.log(`Running pre commit script...\n`.magenta);
+
+cp.exec(`npm run styles`, (err, stdout, stderr) => {
+	if (err) {
+		console.log(stdout);
+		console.log(`There was an error in pre-commit. Kindly fix in order to proceed.\n`.bgRed);
+		process.exit(1);
+	}
+});
