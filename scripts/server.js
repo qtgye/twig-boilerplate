@@ -22,6 +22,7 @@ function startServer() {
   const templatePaths = /^\/(components|layouts|pages|partials)/;
 
 	app.use('/public', express.static(`${process.cwd()}/public`));
+  app.use('/src', express.static(`${process.cwd()}/src`));
 
   app.get('/:page?', (req, res) => {
 		// Use home if 'page' param is not given
