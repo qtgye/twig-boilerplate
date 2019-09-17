@@ -1,7 +1,3 @@
-/*
- * Overrides build/browserify.js from the nsdq theme
- */
-
 require('colors');
 const fs = require('fs-extra');
 const path = require('path');
