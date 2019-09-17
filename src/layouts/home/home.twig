@@ -14,11 +14,16 @@
 	</head>
 
 	<body class="home">
+		{# Include sprites #}
+		{% include '@components/sprite/sprite.twig' %}
+
 		{# Global header #}
 		{% include '@components/header/header.twig' %}
 
 		{% block contents %}
 			{# Contents go here #}
 		{% endblock %}
+
+		<script src="/public/index.js" type="module"></script>
 	</body>
 </html>

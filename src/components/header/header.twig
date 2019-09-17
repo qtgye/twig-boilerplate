@@ -2,4 +2,9 @@
 	<div class="header__content">
 		The header!
 	</div>
+
+	{# Sample icon usage #}
+	<button>
+		{% include '@components/icon/icon.twig' with { icon: 'menu' } only %}
+	</button>
 </header>

@@ -1,0 +1,13 @@
+{# Used to leverage SVG icon using <use /> #}
+
+{# List of viewBoxes #}
+{% set viewBoxes = {
+	'menu': '0 0 16 14'
+} %}
+
+{% if icon %}
+	{# Default viewBox is 0 0 20 20 #}
+	{% set viewBox = viewBoxes[icon] ? viewBoxes[icon] : "0 0 20 20"%}
+
+	<svg class="icon" viewBox="{{ viewBox }}"><use xlink:href="#{{ icon }}" x="0" y="0"/></svg>
+{% endif %}
