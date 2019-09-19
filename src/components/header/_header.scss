@@ -1,10 +1,3 @@
 .header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba($blue, .15);
-
-  &__content {
-    display: flex;
-  }
+  grid-column: col-start 1 / col-end -1;
 }
