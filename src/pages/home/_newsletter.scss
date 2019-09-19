@@ -1,0 +1,23 @@
+.newsletter {
+  margin-top: 35px;
+
+  h2 {
+    text-align: center;
+  }
+
+  .newsletter__sub-text {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+.newsletter__sub-text {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: $color-dark-3;
+}
