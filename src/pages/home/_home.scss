@@ -1,4 +1,10 @@
 .home {
-  display: block;
-  background-color: rgba(#393, .15);
+  background-color: #fff;
+}
+
+.guide,
+.partners,
+.services,
+.newsletter {
+  grid-column: col-start 1 / col-end -1;
 }
