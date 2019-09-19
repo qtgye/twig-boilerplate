@@ -18,3 +18,13 @@
     color: $color-light-1;
   }
 }
+
+@mixin heading-2 {
+  @include heading;
+  font-size: 22px;
+}
+
+.heading-2 {
+  @include heading-2;
+  color: $color-dark-2;
+}
