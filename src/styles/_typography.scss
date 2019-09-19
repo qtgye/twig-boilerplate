@@ -2,12 +2,12 @@
   letter-spacing: 1.3px;
   line-height: 1.2;
   font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
 }
 
 @mixin heading-1 {
   @include heading;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 .heading-1 {
@@ -22,6 +22,7 @@
 @mixin heading-2 {
   @include heading;
   font-size: 22px;
+  letter-spacing: .5px;
 }
 
 .heading-2 {
