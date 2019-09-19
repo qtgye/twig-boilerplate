@@ -109,7 +109,51 @@
     </button>
   </section>
   <section class='services'>
-    Services
+    <h2 class='heading-2'>
+      Discover holiday activities
+    </h2>
+    <ul class='service-list'>
+      {%
+        set services = [
+          {
+            title: 'Sports and Activies',
+            img: 'https://images.unsplash.com/photo-1498581444814-7e44d2fbe0e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+          },
+          {
+            title: 'Wellness and Health',
+            img: 'https://images.unsplash.com/photo-1484583066749-c2129489f52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+          },
+          {
+            title: 'Extreme Sports and Expeditions',
+            img: 'https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+          },
+          {
+            title: 'Games',
+            img: 'https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+          },
+          {
+            title: 'Culture and Education',
+            img: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+          },
+          {
+            title: 'Enjoyment and Relaxation',
+            img: 'https://images.unsplash.com/photo-1512552288940-3a300922a275?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+          },
+          {
+            title: 'Travelling',
+            img: 'https://images.unsplash.com/photo-1553531889-3836a7ee6d3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+          },
+        ] 
+      %}
+      {% for service in services %}
+        <li style='background-image: linear-gradient(to top,
+        rgba(0, 0, 0, .3), rgba(0, 0, 0, .1)), url("{{ service.img }}");' class='service-list__item'>
+            <h4 class='service__name'>
+            {{ service.title }}
+          </h4>
+        </li>
+      {% endfor %}
+    </ul>
   </section>
   <section class='newsletter'>
     Newsletter
