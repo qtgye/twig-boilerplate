@@ -24,6 +24,15 @@
     background-color: $color-light-1;
     color: $color-primary;
   }
+
+  &-outline {
+    @include btn;
+    font-weight: bold;
+    width: 280px;
+    border: 2px solid $color-primary;
+    background-color: transparent;
+    color: $color-primary;
+  }
 }
 
 .btn--link {
@@ -35,12 +44,16 @@
   }
 }
 
-.btn--default-outline {
+.btn--default {
   @include btn;
-  border: 2px solid $color-light-1;
-  background-color: transparent;
 
-  &:hover {
-    border-color: $color-primary;
+  &-outline {
+    @include btn;
+    border: 2px solid $color-light-1;
+    background-color: transparent;
+
+    &:hover {
+      border-color: $color-primary;
+    }
   }
 }
