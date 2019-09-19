@@ -33,7 +33,7 @@
           0), rgba(0, 0, 0, 0.6)), url("{{guide.img}}")'
           class='guide-list__item'
        >
-          <div class='guide__capsule'>Step 1</div>
+          <div class='guide__capsule'>Step {{ loop.index }}</div>
           <h3 class='guide__title'>{{ guide.title }}</h3>
           <p class='guide__text'>
             {{ guide.text }}
