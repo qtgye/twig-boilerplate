@@ -1,0 +1,13 @@
+COLORS
+$color-primary: #ebcb80;
+
+$color-grey-l: #e6e6e6;
+$color-grey-m: #999999;
+$color-grey-h: #4b4b4b;
+
+FONTS
+$font-primary: 'Montserrat';
+$font-1: 'SourceSansPro';
+$font-2: 'LucidaGrande';
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:400,400i,700&display=swap" rel="stylesheet">
