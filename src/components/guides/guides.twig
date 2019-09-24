@@ -1,0 +1,45 @@
+<section class="guide">
+  <div class='container'>
+    <h2 class='heading-2'>
+      How Dreamshare
+    </h2>
+    <div class='guide__container'>
+      <ol class='guide-list'>
+        {% 
+          set guides = [
+            {
+              title: 'Sed leo enim, condimentum',
+              text: 'Quisque libero libero, dictum non turpis in, luctus
+              semper lorem. Donec rhoncus a leo sit amet facilisis.',
+              img: 'https://images.unsplash.com/photo-1568823983807-bb73e29cc96d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+            },
+            {
+              title: 'Morbi velit risus',
+              text: 'Nulla venenatis tempor dui in molestie. Nulla quis
+              dictum purus, sit amet porttitor est.',
+              img: 'https://images.unsplash.com/photo-1568812861383-7d7e430959e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+            },
+            {
+              title: 'Sed leo enim, condimentum',
+              text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.',
+              img: 'https://images.unsplash.com/photo-1568804459589-740b454e5dc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
+            },
+          ]
+        %}
+        {% for guide in guides %}
+          <li 
+            style='background-image: linear-gradient(to bottom, rgba(0, 0, 0,
+            0), rgba(0, 0, 0, 0.6)), url("{{guide.img}}")'
+            class='guide-list__item'
+         >
+            <div class='guide__capsule'>Step {{ loop.index }}</div>
+            <h3 class='guide__title'>{{ guide.title }}</h3>
+            <p class='guide__text'>
+              {{ guide.text }}
+            </p>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>

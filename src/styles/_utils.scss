@@ -1,0 +1,22 @@
+.container {
+  @include container;
+  width: calc(100% - 20px);
+  place-items: center;
+  place-content: center;
+
+  > * {
+    grid-column: 1 / -1;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-column-gap: 20px;
+
+    > * {
+      grid-column: unset;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 960px;
+  }
+}

@@ -17,6 +17,12 @@
     @include heading-1;
     color: $color-light-1;
   }
+
+  @media screen and (min-width: 768px) {
+    &--w {
+      font-size: 52px;
+    }
+  }
 }
 
 @mixin heading-2 {
