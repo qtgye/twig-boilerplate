@@ -1,0 +1,68 @@
+<section class='partners'>
+  <div class='container'>
+    <h2 class='heading-2'>
+      Meet a partner for your best holiday
+    </h2>
+    <ul class='partners-list'>
+      {%
+      set partners = [
+        {
+          name: 'Bradley Hunter',
+          text: 'Based in Chicago. I love playing tennis and loud
+          music.',
+          img:
+          'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60',
+          icon: '🎵',
+          color: '#ff4e50'
+        },
+        {
+          name: 'Diana Wells',
+          text: 'Living in Athens, Greece. I love black and white classics, chillout music and green tea.',
+          img:
+          'https://images.unsplash.com/photo-1524593689594-aae2f26b75ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80',
+          icon: '📷',
+          color: '#ffa710'
+        },
+        {
+          name: 'Marie Bennett',
+          text: 'Currently living in Colorado. Lover of art, languages and travelling.',
+          img:
+          'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60',
+          icon: '🖌️',
+          color: '#19d4ca',
+        },
+        {
+          name: 'Christopher Pierce',
+          text: 'Star Wars fanatic. I have a persistent enthusiasm to create new things.',
+          img:
+          'https://images.unsplash.com/photo-1528763380143-65b3ac89a3ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60',
+          icon: '✈️',
+          color: '#667df3'
+        },
+      ] 
+      %}
+
+      {% for partner in partners %}
+        <li class='partners-list__item'>
+          <div class='partner__avatar'>
+            <img
+              class='partner__avatar-img'
+              src='{{ partner.img }}'
+              align='middle'
+            />
+            <span style='background-color: {{ partner.color }};' class='partner__avatar-icon'>{{ partner.icon }}</span>
+          </div>
+          <h4 class='partner__name'>
+            {{ partner.name }}
+          </h4>
+          <p class='partner__text'>
+          {{ partner.text }}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+    <button class='btn--primary-outline'>
+      See other partners
+    </button>
+  </div>
+</section>

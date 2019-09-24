@@ -1,0 +1,147 @@
+.partners {
+  margin-top: 36px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  button {
+    margin-top: 35px;
+  }
+
+  &-list {
+    list-style-type: none;
+
+    & > li:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .partner__name {
+      margin-top: 17px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.partner__avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.partner__avatar-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.partner__avatar-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background-color: $color-primary;
+  color: $color-light-1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px $color-light-1;
+  transition-property: top, left, transform, width, height;
+  transition-duration: .15s;
+  transition-delay: 0s, 0s, 0s, .15s, .15s;
+  transition-timing-function: ease-in;
+}
+
+.partner__name {
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-dark-2;
+}
+
+.partner__text {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: $color-dark-3;
+}
+
+@media screen and (min-width: 768px) {
+  .partners {
+    margin-top: 95px;
+
+    .heading-2 {
+      grid-column: 1 / -1;
+      margin-bottom: 35px;
+    }
+
+    &-list {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 20px;
+      align-items: start;
+
+      &__item:first-child {
+        grid-column: 3 / 7;
+      }
+
+      &__item:nth-child(2) {
+        grid-column: 7 / 11;
+      }
+
+      &__item:nth-child(3) {
+        grid-column: 3 / 7;
+        grid-row: 2 / 2;
+      }
+
+      &__item:last-child {
+        grid-column: 7 / 11;
+        grid-row: 2 / 2;
+      }
+    }
+
+    .container {
+      > button {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .partners {
+    &-list {
+      grid-template-rows: 1fr;
+
+      &__item:first-child {
+        grid-column: 1 / 4;
+      }
+
+      &__item:nth-child(2) {
+        grid-column: 4 / 7;
+      }
+
+      &__item:nth-child(3) {
+        grid-column: 7 / 10;
+        grid-row: 1 / 1;
+      }
+
+      &__item:last-child {
+        grid-column: 10 / 13;
+        grid-row: 1 / 1;
+      }
+    }
+  }
+}
