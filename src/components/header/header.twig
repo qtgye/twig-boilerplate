@@ -1,10 +1,23 @@
 <header class="header">
-	<div class="header__content">
-		The header!
-	</div>
+  <div class='container'>
+    <div class='header__top'>
+      <div class="header__brand">
+        Hofmann
+      </div>
+      <button class='header__toggler'>
+        {% include '@components/icon/icon.twig' with { icon: 'menu' } only %}
+      </button>
+    </div>
 
-	{# Sample icon usage #}
-	<button>
-		{% include '@components/icon/icon.twig' with { icon: 'menu' } only %}
-	</button>
+    <div class='header__content'>
+      <nav class='header-nav'>
+        <a class='header-nav__item' href='#mission'>Mission</a>
+        <a class='header-nav__item' href='#services'>Services</a>
+        <a class='header-nav__item' href='#about'>About</a>
+      </nav>
+      <button class='btn-primary--outline'>
+        Take a Tour
+      </button>
+    </div>
+  </div>
 </header>
