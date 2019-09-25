@@ -1,0 +1,21 @@
+.btn-primary {
+  @include btn-primary;
+
+  &:hover {
+    background-color: $color-grey-h;
+    border-color: $color-grey-h;
+    color: $color-primary;
+  }
+
+  &--outline {
+    @include btn-primary;
+    background-color: transparent;
+    border-color: $color-w;
+    color: $color-w;
+  }
+
+  &--outline:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}

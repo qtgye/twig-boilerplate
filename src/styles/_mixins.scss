@@ -1,0 +1,45 @@
+@mixin btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 15rem;
+  height: 3rem;
+  border: .2rem solid $color-primary;
+  font-size: 1.2rem;
+  color: $color-grey-h;
+  letter-spacing: .08rem;
+  background-color: $color-primary;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  transition-property: background-color, border-color, color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    height: 4rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 18rem;
+    height: 5rem;
+    font-size: 1.6rem;
+  }
+}
+
+@mixin container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1rem;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% - 5rem);
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 117rem;
+    width: calc(100% - 3rem);
+  }
+}
