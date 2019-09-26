@@ -1,0 +1,134 @@
+$team-list-areas: (
+  1: a,
+  2: b,
+  3: c,
+  4: d,
+  5: e,
+  6: f,
+);
+
+.team {
+  margin-top: 4.5rem;
+
+  .heading {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &-list {
+    grid-column: 1 / -1;
+    list-style-type: none;
+
+    @include container;
+  }
+
+  &-list__item {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &-list > &-list__item:not(:last-child) {
+    margin-bottom: 3.5rem;
+  }
+
+  &-avatar {
+    grid-column: 1 / 4;
+    flex-shrink: 0;
+    align-self: start;
+    justify-self: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: .2rem solid $color-grey-lm;
+    overflow: hidden;
+    margin-right: 2rem;
+  }
+
+  &-avatar__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-info {
+    grid-column: 4 / -1;
+    justify-self: start;
+    align-self: start;
+    font-family: $font-1;
+  }
+
+  &-info__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.33;
+  }
+
+  &-info__title {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+  }
+
+  &-info__text {
+    font-size: 1.1rem;
+    line-height: 1.45;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    &-list {
+      grid-row-gap: 4rem;
+      grid-template-areas:
+        ". a a a a a b b b b b."
+        ". c c c c c d d d d d."
+        ". e e e e e f f f f f.";
+    }
+
+    // add grid area to each .team-list__item
+    @each $list-area-key, $list-area-value in $team-list-areas {
+      &-list > &-list__item:nth-child(#{$list-area-key}) {
+        grid-area: $list-area-value;
+      }
+    }
+
+    &-avatar {
+      width: 6rem;
+      height: 6rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .team {
+    .heading {
+      margin-bottom: 5rem;
+    }
+
+    &-list {
+      grid-row-gap: 8rem;
+      grid-template-areas:
+        "a a a a b b b b c c c c"
+        "d d d d e e e e f f f f";
+    }
+
+    &-avatar {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    &-info__name {
+      font-size: 1.8rem;
+    }
+
+    &-info__title,
+    &-info__text {
+      font-size: 1.6rem;
+    }
+  }
+}

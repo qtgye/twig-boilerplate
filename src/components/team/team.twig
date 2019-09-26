@@ -1,0 +1,70 @@
+<section class='team'>
+  <div class='container'>
+    <h2 class='heading'>
+      Our Team
+    </h2>
+    <ul class='team-list'>
+      {%
+        set teamMembers = [
+          {
+            name: 'Craig Todd',
+            title: 'CEO',
+            brief: 'Like the majority of sales people, I visit a huge
+            number of clients and prospects every month',
+            avatar: 'src/images/person_2019-09-24/person.jpg'
+          },
+          {
+            name: 'Jennie Graham',
+            title: 'UX/UI Designer',
+            brief: 'WordPress Version 2 0 3 Review',
+            avatar: 'src/images/person_2019-09-24(2)/person.jpg'
+          },
+          {
+            name: 'Chase Meyer',
+            title: 'Front-end Developer',
+            brief: 'Search Engine Optimization And Advertising',
+            avatar: 'src/images/person_2019-09-24(4)/person.jpg'
+          },
+          {
+            name: 'Vera Hopkins',
+            title: 'UX Lead',
+            brief: 'Differentiate Yourself And Attract More Attention
+            Sales and Profits',
+            avatar: 'src/images/person_2019-09-24(1)/person.jpg'
+          },
+          {
+            name: 'Eunice Wang',
+            title: 'Marketing consultant',
+            brief: 'Advertising Internet Online Opportunities To
+            Explore', 
+            avatar: 'src/images/person_2019-09-24(3)/person.jpg'
+          },
+          {
+            name: 'Johnny Vargas',
+            title: 'Back-end Developer',
+            brief: 'Maintain Your PC Performance With PC Programs',
+            avatar: 'src/images/person_2019-09-24(5)/person.jpg'
+          },
+        ] 
+      %}
+      {% for member in teamMembers %}
+        <li class='team-list__item'>
+          <figure class='team-avatar'>
+            <img 
+               class='team-avatar__img' 
+               src='{{ member.avatar }}'
+               alt='{{ member.name }}'
+            />
+          </figure>
+          <div class='team-info'>
+            <p class='team-info__name'>{{ member.name }}</p>
+            <p class='team-info__title'>{{ member.title }}</p>
+            <p class='team-info__text'>
+              {{ member.brief }}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
