@@ -37,6 +37,7 @@
   }
 
   &__title {
+    text-align: center;
     font-size: 2rem;
     letter-spacing: .08rem;
     line-height: 1.2;
@@ -73,6 +74,8 @@
 
 @media screen and (min-width: 768px) {
   .hero {
+    height: calc(100vh - 10.5rem);
+
     &__title {
       font-size: 3.2rem;
       font-weight: bold;
@@ -108,6 +111,8 @@
 
 @media screen and (min-width: 1280px) {
   .hero {
+    height: calc(100vh - 15rem);
+
     &__text {
       font-size: 1.6rem;
       line-height: 1.5;
