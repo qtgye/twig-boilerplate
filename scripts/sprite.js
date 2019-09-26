@@ -26,6 +26,15 @@ function onBuildDone() {
 	});
 }
 
+
+function updateTemplateViewBox(viewBox) {
+  const iconTemplate = path.resolve(COMPONENTS_ROOT, 'icon/icon.twig');
+  const templateContents = fs.readFileSync(iconTemplate).toString();
+  const viewBoxesJSON = JSON.stringify(viewBox, null, '\t');
+  const updatedTemplate = templateContents.replace(/(?<=viewBoxes[^{]+){[^{}]+}/g, viewBoxesJSON);
+  fs.outputFileSync(iconTemplate, updatedTemplate);
+}
+
 function getSVGFileData(filePath) {
 	const contents = fs.readFileSync(filePath).toString();
 	let name = filePath.match(/[^/]+(?=\.svg)/i);
@@ -42,12 +51,19 @@ function getSVGFileData(filePath) {
 
 function getSVGPaths() {
 	const matches = glob.sync(path.resolve(PROJECT_ROOT, 'src/images/icons/*.svg'));
+  const viewBoxes = {};
 
 	// Add each SVG file into the sprite
 	matches.forEach(filePath => {
 		const svgData = getSVGFileData(filePath);
 
 		if ( svgData ) {
+      const viewBox = svgData.contents.match(/(?<=viewBox=['"])[^'"]+/gi);
+
+      if ( viewBox  ) {
+        viewBoxes[svgData.name] = viewBox[0];
+      }
+
 			SPRITE.add(svgData.name, svgData.contents);
 		}
 	});
@@ -61,6 +77,8 @@ function getSVGPaths() {
 	// Write to component file
 	fs.outputFileSync(path.resolve(COMPONENTS_ROOT, 'sprite/sprite.twig'), spriteHTML);
 
+
+  updateTemplateViewBox(viewBoxes);
 	onBuildDone();
 }
 
