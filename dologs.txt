@@ -1,1 +1,5 @@
 done - create a mixin for container.
+- replace all Source Sans Pro to $font-1.
+- replace body font-family to $font-1.
+- heading spacing can be declare once.
+- button color on hover.
