@@ -1,0 +1,12 @@
+.input {
+  min-width: 19rem;
+  height: 3.2rem;
+  background-color: transparent;
+  border: 1px solid $color-grey-h;
+  padding: 0 1.5rem;
+  border-radius: .3rem;
+
+  @media screen and (min-width: 768px) {
+    height: 4rem;
+  }
+}
