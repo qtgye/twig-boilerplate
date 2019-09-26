@@ -15,7 +15,25 @@
   }
 
   &--outline:hover {
+    background-color: $color-grey-h;
     border-color: $color-primary;
     color: $color-primary;
+  }
+}
+
+.btn-dark {
+  @include btn-primary;
+
+  &--outline {
+    @include btn-primary;
+    background-color: transparent;
+    border-color: $color-grey-h;
+    color: $color-grey-h;
+  }
+
+  &--outline:hover {
+    background-color: $color-grey-h;
+    border-color: $color-w;
+    color: $color-w;
   }
 }
