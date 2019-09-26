@@ -1,0 +1,139 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+  height: calc(100vh - 5.6rem);
+  width: 100%;
+  background-image: url('/src/images/background_2019-09-24/background.jpg');
+  background-size: cover;
+  background-position: center;
+
+  > .container > *:not(.hero__flags) {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  &__head,
+  &__input-group {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 1.5rem;
+
+    > * {
+      grid-column: 3 / 11;
+    }
+  }
+
+  &__input-group {
+    margin: 2rem 0 4rem 0;
+  }
+
+  &__flags {
+    grid-column: 3 / 11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    letter-spacing: .08rem;
+    line-height: 1.2;
+    color: $color-grey-h;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.45;
+    letter-spacing: .08rem;
+    color: $color-grey-h;
+    grid-column: 2 / 12;
+  }
+
+  &__flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    background-color: $color-grey-h;
+    border: none;
+  }
+
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: fill .15s ease-in;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    &__title {
+      font-size: 3.2rem;
+      font-weight: bold;
+    }
+
+    &__input-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0 5rem 0;
+
+      > .input {
+        margin-right: 1.5rem;
+        min-width: 27rem;
+      }
+    }
+
+    &__flags {
+      grid-column: 4 / 10;
+    }
+
+    &__flag {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+
+    .icon {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    &__text {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    &__input-group {
+      margin: 3rem 0 6rem 0;
+
+      > .input {
+        height: 5rem;
+      }
+    }
+
+    &__flags {
+      grid-column: 5 / 9;
+    }
+
+    &__flag {
+      width: 8rem;
+      height: 8rem;
+      background-color: $color-grey-h;
+    }
+
+    .icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}

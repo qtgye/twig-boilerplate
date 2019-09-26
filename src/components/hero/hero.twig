@@ -1,0 +1,29 @@
+<section class='hero'>
+  <div class='container'>
+    <header class='hero__head'>
+      <h1 class='hero__title'>
+        Choose The Right Boutique Hotel for you
+      </h1>
+      <p class='hero__text'>
+        How to Fly A Private Jet On Your Next Trip
+      </p>
+    </header>
+    <div class='hero__input-group'>
+      <input class='input' type='email' placeholder='Your Email' />
+      <button class='btn-dark--outline'>
+        Find Now
+      </button>
+    </div>
+    <div class ='hero__flags'>
+      <button class='hero__flag'>
+        {% include '@components/icon/icon.twig' with { icon: 'plane' } only %}
+      </button>
+      <button class='hero__flag'>
+        {% include '@components/icon/icon.twig' with { icon: 'wallet' } only %}
+      </button>
+      <button class='hero__flag'>
+        {% include '@components/icon/icon.twig' with { icon: 'case' } only %}
+      </button>
+    </div>
+  </div>
+</section>
