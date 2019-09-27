@@ -3,3 +3,4 @@ done - create a mixin for container.
 - replace body font-family to $font-1.
 - heading spacing can be declare once.
 - button color on hover.
+- use variables for each breakpoints.

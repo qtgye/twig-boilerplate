@@ -1,3 +1,16 @@
 $font-primary: 'Montserrat';
 $font-1: 'Source Sans Pro';
 $font-2: 'Lucida Grande';
+
+$lucida-grande: 'src/fonts/lucida-grande/LucidaGrande';
+
+@font-face {
+  font-family: 'Lucida Grande', sans-serif;
+  src: url('#{$lucida-grande}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lucida Grande', sans-serif;
+  font-weight: 700, bold;
+  src: url('#{$lucida-grande}Bold.ttf') format('truetype');
+}

@@ -23,6 +23,15 @@
 
 .btn-dark {
   @include btn-primary;
+  color: $color-w;
+  background-color: $color-grey-h;
+  border-color: $color-grey-h;
+
+  &:hover {
+    color: $color-grey-h;
+    background-color: $color-w;
+    border-color: $color-w;
+  }
 
   &--outline {
     @include btn-primary;
