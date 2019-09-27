@@ -1,0 +1,87 @@
+<section class='offer'>
+  <div class='container'>
+    <h2 class='heading'>Choose Your Plan</h2>
+    <ul class='offer-list'>
+      {%
+        set offerList = [
+          {
+            title: 'Silver',
+            currency: '$',
+            amount: 49,
+            duration: 'Year',
+            details: [
+              {
+                title: 'Personal Account'
+              },
+              {
+                title: '25 GB Discspace'
+              },
+              {
+                title: '50 Uploads per day'
+              },
+            ]
+          },
+          {
+            title: 'Gold',
+            currency: '$',
+            amount: 99,
+            duration: 'Year',
+            details: [
+              {
+                title: 'Personal Account'
+              },
+              {
+                title: '50 GB Discspace'
+              },
+              {
+                title: '500 Uploads per day'
+              },
+            ]
+          },
+          {
+            title: 'Platinum',
+            currency: '$',
+            amount: 299,
+            duration: 'Year',
+            details: [
+              {
+                title: 'Team Account'
+              },
+              {
+                title: '500 GB Discspace'
+              },
+              {
+                title: 'Unlimited Uploads per day'
+              },
+            ]
+          },
+        ] 
+      %}
+
+      {% for offer in offerList %}
+        <li class='offer-list__item'>
+          <div class='card card--{{ offer.title|lower }}'>
+            <h4 class='card__title'>{{ offer.title }}</h4>
+            <div class='offer-price'>
+              <sup class='offer-price__currency'>{{ offer.currency }}</sup>
+              <span class='offer-price__amount'>{{ offer.amount }}</span>
+            </div>
+            <p class='offer-duration'>{{ offer.duration }}</p>
+            <ul class='offer-details'>
+              {% for detail in offer.details %}
+                <li class='offer-details__item'>
+                  {{ detail.title }}
+                </li>
+              {% endfor %}
+            </ul>
+            {% if offer.title == 'Gold' %}
+              <button class='btn-dark'>Purchase</button>
+            {% else %}
+              <button class='btn-primary'>Purchase</button>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

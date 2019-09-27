@@ -1,0 +1,177 @@
+.offer {
+  margin-top: 7rem;
+  background-color: $color-grey-h;
+  padding: 5rem 0;
+
+  .heading {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+    color: $color-w;
+  }
+
+  &-list {
+    grid-column: 2 / -2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  &-list > &-list__item:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  &-details {
+    list-style-type: none;
+    margin-bottom: 2rem;
+  }
+
+  &-price {
+    position: relative;
+    text-align: center;
+  }
+
+  &-price__currency {
+    position: absolute;
+    left: -1rem;
+    top: 1rem;
+  }
+
+  &-price__amount {
+    font-size: 3.6rem;
+    line-height: 1.33;
+    letter-spacing: .0131rem;
+  }
+
+  &-duration {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: $font-2;
+    line-height: 2.25;
+    letter-spacing: .067rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+
+  &-details__item {
+    font-size: 1.1rem;
+    font-family: $font-1;
+    line-height: 2.18;
+    text-align: center;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 22rem;
+  height: auto;
+  padding-bottom: 3rem;
+  min-height: 24.8rem;
+  border-radius: .8rem;
+  color: $color-w;
+  background-color: $color-grey-h;
+  background-image: linear-gradient(221deg, rgba($color-w, .3), rgba($color-d, 0));
+  box-shadow: 0 .4rem 1.2rem 0 rgba($color-d, .5);
+  overflow: hidden;
+  transition: box-shadow .15s ease-in;
+
+  &:hover {
+    box-shadow: 0 .8rem 1.6rem 0 rgba($color-d, .5);
+  }
+
+  &--silver {
+    background-image: linear-gradient(221deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+  }
+
+  &--gold {
+    color: $color-grey-h;
+    background-color: $color-primary;
+    background-blend-mode: soft-light;
+    background-image: linear-gradient(222deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+  }
+
+  &--platinum {
+    background-image: linear-gradient(220deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .4));
+  }
+
+  &__title {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-family: $font-2;
+    font-weight: bold;
+    line-height: 2.25;
+    letter-spacing: .067rem;
+    color: $color-primary;
+  }
+
+  &--gold &__title {
+    color: $color-grey-h;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .offer {
+    .heading {
+      margin-bottom: 3rem;
+    }
+
+    &-list {
+      grid-column: 1 / -1;
+
+      @include container;
+    }
+
+    &-list > &-list__item:not(:last-child) {
+      margin: 0;
+    }
+
+    &-list > &-list__item:first-child {
+      grid-column: 1 / 5;
+    }
+
+    &-list > &-list__item:nth-child(2) {
+      grid-column: 5 / 9;
+    }
+
+    &-list > &-list__item:last-child {
+      grid-column: 9 / 13;
+    }
+  }
+
+  .card {
+    width: 100%;
+    min-height: 28rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .offer {
+    .heading {
+      margin-bottom: 5rem;
+    }
+
+    &-price__amount {
+      font-size: 6.4rem;
+    }
+
+    &-price__currency {
+      font-size: 2.4rem;
+      left: -1.5rem;
+    }
+
+    &-details__item {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+
+  .card {
+    &-title {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
