@@ -1,0 +1,137 @@
+.gallery {
+  margin-top: 3.5rem;
+  padding-bottom: 5rem;
+
+  .heading {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+  }
+
+  .places {
+    grid-column: 4 / 10;
+    height: 2.5rem;
+    border-radius: 5rem;
+    border: .1rem solid $color-grey-h;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-grey-h;
+  }
+
+  &-photos {
+    grid-column: 1 / -1;
+    list-style-type: none;
+    grid-row-gap: 1rem;
+
+    @include container;
+  }
+
+  &-photos > &-photo:nth-child(odd) {
+    grid-column: 2 / 7;
+  }
+
+  &-photos > &-photo:nth-child(even) {
+    grid-column: 7 / 12;
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .photo {
+    width: 100%;
+    height: 11.6rem;
+    object-fit: cover;
+  }
+
+  &-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    .places {
+      display: none;
+    }
+
+    &-nav {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    &-nav > &-nav__item {
+      margin-right: 5rem;
+    }
+
+    &-nav__item {
+      position: relative;
+      text-decoration: none;
+      color: $color-grey-h;
+      font-size: 1.2rem;
+    }
+
+    &-nav__item:hover::before {
+      opacity: 1;
+    }
+
+    &-nav__item::before {
+      position: absolute;
+      content: attr(data-text);
+      display: block;
+      font-weight: bold;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      background-color: #fff;
+      opacity: 0;
+      transition: opacity .15s ease-in;
+    }
+
+    &-photos {
+      grid-column: 2 / -2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      grid-gap: 1rem;
+      max-width: 61.5rem;
+      margin: 0 auto;
+    }
+
+    &-photo {
+      width: 19.5rem;
+      height: 19.5rem;
+    }
+
+    .photo {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery {
+    &-photos {
+      max-width: 95rem;
+    }
+
+    &-photo {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    &-nav__item {
+      font-size: 1.8rem;
+    }
+  }
+}

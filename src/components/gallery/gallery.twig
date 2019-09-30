@@ -1,0 +1,27 @@
+<section class='gallery'>
+  <div class='container'>
+    <h2 class='heading'>Places</h2>
+    <select class='places' value='sf'>
+      <option value='sf'>San Francisco</option>
+      <option value='sl'>South Liliana</option>
+      <option value='bv'>Blickview</option>
+      <option value='nr'>New Raven</option>
+    </select>
+    <nav class='gallery-nav'>
+      <a class='gallery-nav__item' href='#' data-text='San Francisco'>San Francisco</a>
+      <a class='gallery-nav__item' href='#' data-text='South Liliana'>South Liliana</a>
+      <a class='gallery-nav__item' href='#' data-text='Blickview'>Blickview</a>
+      <a class='gallery-nav__item' href='#' data-text='New Raven'>New Raven</a>
+    </nav>
+    <ul class='gallery-photos'>
+      {% for i in 1..6 %}
+      <li class='gallery-photo'>
+        <figure class='photo-container'>
+          <img class='photo'
+          src='/src/images/card-{{i}}_2019-09-24/card-{{i}}.jpg' />
+        </figure>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
