@@ -68,7 +68,7 @@
       margin-bottom: 2rem;
     }
 
-    &-nav > &-nav__item {
+    &-nav > &-nav__item:not(:last-child) {
       margin-right: 5rem;
     }
 
