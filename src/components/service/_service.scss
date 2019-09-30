@@ -1,0 +1,117 @@
+.service {
+  background-color: $color-grey-h;
+  color: $color-w;
+  padding: 4rem 0;
+
+  .heading {
+    grid-column: 1 / -1;
+    color: $color-w;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    grid-column: 2 / -2;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: $font-1;
+    line-height: 1.45;
+    margin-bottom: 3rem;
+  }
+
+  &-list {
+    grid-column: 1 / -1;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-list > &-list__item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &-icon {
+    margin: 2rem 0;
+  }
+
+  &-icon .icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &-info {
+    font-size: 1.1rem;
+    font-family: $font-1;
+    line-height: 1.45;
+    text-align: center;
+    width: 15.6rem;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .btn-primary {
+    margin-top: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    &-list {
+      align-items: start;
+
+      @include container;
+    }
+
+    &-icon > .icon {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &-list > &-list__item:not(:last-child) {
+      margin: 0;
+    }
+
+    &-list > &-list__item:first-child {
+      grid-column: 1 / 5;
+    }
+
+    &-list > &-list__item:nth-child(2) {
+      grid-column: 5 / 9;
+    }
+
+    &-list > &-list__item:last-child {
+      grid-column: 9 / 13;
+    }
+
+    .card__title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .service {
+    &-icon > .icon {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      width: 43rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-title,
+    &-info {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    &-info {
+      width: calc(100% - 13rem);
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<section class='service'>
+  <div class='container'>
+    <h2 class='heading'>
+      Advantages
+    </h2>
+    <p class='service__text'>
+      One more thing! Any time we start something new it is exciting and
+      we are very motivated and committed.  
+    </p>
+    <ul class='service-list'>
+      {%
+        set serviceList = [
+          {
+            title: 'Secure',
+            icon: 'safe',
+            head: 'Your data is protected',
+            content: 'No matter how far along you are in your sophistication as an amateur astronomer…'
+          },
+          {
+            title: 'Aesthetic',
+            icon: 'aesthetic',
+            head: 'Unique Design',
+            content: 'Acres of Diamonds… you’ve read the famous story, or
+            at least had it related to you.'
+          },
+          {
+            title: 'Neat',
+            icon: 'neat-icon',
+            head: 'Accurate in details',
+            content: 'Some days a motivational quote can provide a quick
+            pick-me-up.'
+          },
+        ] 
+      %}
+      {% for service in serviceList %}
+        <li class='service-list__item'>
+          <div class='card card--platinum'>
+            <h4 class='card__title'>
+              {{ service.title }}
+            </h4>
+            <figure class='service-icon'>
+              {% include '@components/icon/icon.twig' with { icon:
+              service.icon
+              } only %} 
+            </figure>
+            <h5 class='service-title'>{{ service.head }}</h5>
+            <p class='service-info'>
+              {{ service.content }}
+            </p>
+            <button class='btn-primary'>Find More</button>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
