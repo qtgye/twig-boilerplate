@@ -61,57 +61,6 @@
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 22rem;
-  height: auto;
-  padding-bottom: 3rem;
-  min-height: 24.8rem;
-  border-radius: .8rem;
-  color: $color-w;
-  background-color: $color-grey-h;
-  background-image: linear-gradient(221deg, rgba($color-w, .3), rgba($color-d, 0));
-  box-shadow: 0 .4rem 1.2rem 0 rgba($color-d, .5);
-  overflow: hidden;
-  transition: box-shadow .15s ease-in;
-
-  &:hover {
-    box-shadow: 0 .8rem 1.6rem 0 rgba($color-d, .5);
-  }
-
-  &--silver {
-    background-image: linear-gradient(221deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
-  }
-
-  &--gold {
-    color: $color-grey-h;
-    background-color: $color-primary;
-    background-blend-mode: soft-light;
-    background-image: linear-gradient(222deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
-  }
-
-  &--platinum {
-    background-image: linear-gradient(220deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .4));
-  }
-
-  &__title {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
-    font-family: $font-2;
-    font-weight: bold;
-    line-height: 2.25;
-    letter-spacing: .067rem;
-    color: $color-primary;
-  }
-
-  &--gold &__title {
-    color: $color-grey-h;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .offer {
     .heading {
@@ -140,11 +89,6 @@
       grid-column: 9 / 13;
     }
   }
-
-  .card {
-    width: 100%;
-    min-height: 28rem;
-  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -165,13 +109,6 @@
     &-details__item {
       font-size: 1.6rem;
       line-height: 1.5;
-    }
-  }
-
-  .card {
-    &-title {
-      font-size: 1.8rem;
-      margin-bottom: 3rem;
     }
   }
 }
