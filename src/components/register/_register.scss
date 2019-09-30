@@ -1,0 +1,94 @@
+.register {
+  background-image: linear-gradient(to bottom, rgba(75, 75, 75, .3), rgba(75, 75, 75, .3)), url('/src/images/background_2019-09-24(1)/background.jpg');
+  min-height: 47rem;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 5.5rem;
+
+  .heading {
+    grid-column: 1 / -1;
+    margin-bottom: 3rem;
+    color: $color-w;
+    margin-top: 4.5rem;
+  }
+
+  &-form {
+    grid-column: 1 / -1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 26rem;
+    height: 31rem;
+    border-radius: .8rem;
+    background: linear-gradient(to top right, rgba(45, 45, 45, 1) 0%, rgba(67, 67, 67, 1) 100%);
+    margin: 0 auto;
+  }
+
+  &-form__title {
+    font-size: 1.2rem;
+    font-family: $font-2;
+    font-weight: bold;
+    line-height: 2.25;
+    letter-spacing: .08rem;
+    text-align: center;
+    color: $color-primary;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-form__input {
+    width: 22rem;
+    padding: 0 1.5rem;
+    height: 3rem;
+    opacity: .8;
+    border-radius: .4rem;
+    border: .1rem solid $color-grey-m;
+    background-color: $color-w;
+  }
+
+  &-form__link {
+    font-size: 1.1rem;
+    font-family: $font-1;
+    line-height: 2.18;
+    text-align: center;
+    color: $color-primary;
+    text-decoration-line: underline;
+  }
+
+  &-form > *:not(&-form__title) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .register {
+    &-form {
+      width: 27rem;
+      height: 32rem;
+    }
+
+    &-form__input {
+      width: 22rem;
+      height: 3.6rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .register {
+    &-form {
+      width: 36rem;
+      height: 38rem;
+    }
+
+    &-form__title {
+      margin-top: 3rem;
+    }
+
+    &-form__input {
+      width: 25rem;
+    }
+  }
+}
