@@ -1,0 +1,78 @@
+<section class='contact'>
+  <div class='container'>
+    <h2 class='heading'>
+      Contact Us
+    </h2>
+    <form class='contact-form'>
+      <div class='form-group'>
+        <label class='contact-form__label'>Name:</label>
+        <input type='text' class='contact-form__input' />
+      </div>
+      <div class='form-group'>
+        <label class='contact-form__label'>Email:</label>
+        <input type='email' class='contact-form__input' />
+      </div>
+      <div class='form-group'>
+        <label class='contact-form__label'>Message:</label>
+        <textarea class='contact-form__textarea' rows='5'></textarea>
+      </div>
+      <button class='btn-primary'>Submit</button>
+    </form>
+    <div class='contact-details'>
+      <h4 class='contact__title'>Get In Touch</h4>
+      <ul class='details-list'>
+        <li class='details-list__item'>
+          {% include '@components/icon/icon.twig' with { icon: 'location' } only %}
+          <span class='detail__text'>
+            2300 W Arbutus Dr Citrus Springs, FL 34434, USA
+          </span>
+        </li>
+        <li class='details-list__item'>
+          {% include '@components/icon/icon.twig' with { icon: 'mail' } only %}
+          <span class='detail__text'>
+            contact@hofmannui.net
+          </span>
+        </li>
+        <li class='details-list__item'>
+          {% include '@components/icon/icon.twig' with { icon: 'phone' } only %}
+          <span class='detail__text'>
+            793-891-7938, 512-915-5628, 952-775-6021
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class='contact-group'>
+      <div class='contact-credits'>
+        <h4 class='contact__title'>Credits</h4>
+        <p class='contact__text'>
+          In order to discuss the general function of the logo, we must
+          firstly identify and define the environment where this will have to fulfill its function.  
+        </p>
+      </div>
+      <div class='contact-social-container'>
+        <h4 class='contact__title'>Follow</h4>
+        <ul class='contact-social'>
+          <li class='contact-social__item'>
+            {% include '@components/icon/icon.twig' with { icon: 'pinterest' } only %}
+          </li>
+          <li class='contact-social__item'>
+            {% include '@components/icon/icon.twig' with { icon: 'linkedin' } only %}
+          </li>
+          <li class='contact-social__item'>
+            {% include '@components/icon/icon.twig' with { icon:
+            'google-plus' } only %}
+          </li>
+          <li class='contact-social__item'>
+            {% include '@components/icon/icon.twig' with { icon: 'twitter' } only %}
+          </li>
+          <li class='contact-social__item'>
+            {% include '@components/icon/icon.twig' with { icon: 'facebook' } only %}
+          </li>
+          <li class='contact-social__item'>
+            {% include '@components/icon/icon.twig' with { icon: 'instagram' } only %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
